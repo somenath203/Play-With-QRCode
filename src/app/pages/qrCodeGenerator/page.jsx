@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { ExclamationTriangleIcon } from '@radix-ui/react-icons';
 import QRCode from 'react-qr-code';
 
@@ -18,7 +18,6 @@ import {
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
 import { useToast } from "@/components/ui/use-toast"
-import ClipLoader from "react-spinners/ClipLoader";
 
 
 const Page = () => {
@@ -31,7 +30,6 @@ const Page = () => {
 
   const { toast } = useToast();
 
-  const ref = useRef(null);
 
   const onSubmitForm = (e) => {
 
@@ -56,26 +54,6 @@ const Page = () => {
 
   };
 
-  const shareQrCode = () => {
-
-    const svgData = ref.current.outerHTML;
-
-    const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
-
-    const url = URL.createObjectURL(blob);
-
-    navigator.clipboard.writeText(url);
-
-    toast({
-      title: "Success",
-      description: "QR Code Copied Successfully",
-      style: {
-        backgroundColor: "#48BB78", 
-        color: "white",
-      },
-    });
-    
-  }
 
 
   return (
@@ -124,8 +102,8 @@ const Page = () => {
                 <span>Generated QR Code</span>
               </AlertDialogTitle>
               <AlertDialogDescription>
-                {!isTextNotEntered && textAreaInput && <QRCode ref={ref} value={textAreaInput} className='m-auto' />}
-                {ref.current ? <Button className='block m-auto mt-6 mb-3 bg-white text-blue-800 border-2 border-blue-600 hover:border-blue-700 transition-all duration-150 hover:bg-slate-50' onClick={shareQrCode}>Copy QRCode</Button> : <p className='mt-3 text-center flex justify-center items-center gap-2 text-blue-700 text-base'> <span> <ClipLoader color={'#3188D5'} /> </span> <span>Creating Copy-QRCode Link</span> </p>}
+                {!isTextNotEntered && textAreaInput && <QRCode value={textAreaInput} className='m-auto' />}
+                <p className='text-lg font-bold mt-3 text-blue-500 text-center'>Take a photo or screensort of the above generated QRCode to use it later</p>
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
