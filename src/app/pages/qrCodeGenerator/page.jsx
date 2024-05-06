@@ -125,7 +125,7 @@ const Page = () => {
               </AlertDialogTitle>
               <AlertDialogDescription>
                 {!isTextNotEntered && textAreaInput && <QRCode ref={ref} value={textAreaInput} className='m-auto' />}
-                {!ref.current ? <Button className='block m-auto mt-6 mb-3 bg-white text-blue-800 border-2 border-blue-600 hover:border-blue-700 transition-all duration-150 hover:bg-slate-50' onClick={shareQrCode}>Copy QRCode</Button> : <p className='mt-3 text-center flex justify-center items-center gap-2 text-blue-700 text-base'> <span> <ClipLoader color={'#3188D5'} /> </span> <span>Creating Copy-QRCode Link</span> </p>}
+                {ref.current ? <Button className='block m-auto mt-6 mb-3 bg-white text-blue-800 border-2 border-blue-600 hover:border-blue-700 transition-all duration-150 hover:bg-slate-50' onClick={shareQrCode}>Copy QRCode</Button> : <p className='mt-3 text-center flex justify-center items-center gap-2 text-blue-700 text-base'> <span> <ClipLoader color={'#3188D5'} /> </span> <span>Creating Copy-QRCode Link</span> </p>}
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
