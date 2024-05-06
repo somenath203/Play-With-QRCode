@@ -10,7 +10,7 @@ const Page = () => {
       id: 1,
       nameOfTheCard: 'QR Code Generator',
       iconOfTheCard: (
-        <i className="fa-solid fa-plus text-6xl text-blue-600"></i>
+        <i className="ri-add-line text-6xl text-blue-600"></i>
       ),
       navigateTo: '/pages/qrCodeGenerator'
     },
@@ -18,7 +18,7 @@ const Page = () => {
       id: 2,
       nameOfTheCard: 'QR Code Scanner',
       iconOfTheCard: (
-        <i className="fa-solid fa-expand text-6xl text-blue-600"></i>
+        <i className="ri-qr-scan-2-line text-6xl text-blue-600"></i>
       ),
       navigateTo: '/pages/qrCodeScanner'
     },

@@ -7,7 +7,7 @@ const Navbar = () => {
         <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
           <div className="flex flex-wrap justify-between items-center flex-col lg:flex-row mx-auto max-w-screen-xl">
             <a href="#" className="flex items-center gap-2">
-              <i className="fa-solid fa-qrcode text-3xl text-blue-600"></i>
+              <i className="ri-qr-code-line text-3xl text-blue-600"></i>
               <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white tracking-wide">
                 PlayWith<span className='text-blue-500 font-extrabold'>QRCode</span>
               </span>

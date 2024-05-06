@@ -2,7 +2,7 @@ import { Inter as FontSans } from 'next/font/google';
 
 import './globals.css';
 import { cn } from '@/lib/utils';
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from '@/components/ui/toaster';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -17,7 +17,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
@@ -25,7 +30,6 @@ export default function RootLayout({ children }) {
         )}
       >
         {children}
-        <script src="https://kit.fontawesome.com/1b20c7f767.js" crossOrigin="anonymous"></script>
         <Toaster />
       </body>
     </html>
