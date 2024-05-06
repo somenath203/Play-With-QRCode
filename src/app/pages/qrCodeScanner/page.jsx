@@ -63,10 +63,10 @@ const Page = () => {
           Scan QR Code
         </Button>}
 
-        {isDisplayWarningMessage && <Alert className='w-4/6 lg:w-2/4 border border-orange-400 text-orange-400'>
+        {isDisplayWarningMessage && <Alert className='w-5/6 lg:w-2/4 border border-orange-400 text-orange-400'>
           <AlertTitle>Warning</AlertTitle>
           <AlertDescription>
-            This QRCode Scanner can only display result that are either texts or urls. Results that are not texts or urls will not be displayed by this scanner.
+          This QR code scanner can only display text and URLs. If the scanned data contains other types of information other than text or URL for example image, then, no result will be returned by the scanner.
           </AlertDescription>
         </Alert>}
 

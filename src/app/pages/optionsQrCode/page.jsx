@@ -31,9 +31,9 @@ const Page = () => {
 
         <p className="mt-10 lg:mt-28 text-lg tracking-wide text-blue-600 font-semibold">Choose an Option</p>
 
-        <div className="flex items-center flex-col lg:flex-row gap-5 w-96 lg:w-9/12">
+        <div className="flex items-center flex-col lg:flex-row gap-3 lg:gap-5 w-9/12">
           {cardOptions.map((card) => (
-            <Link className="m-auto w-2/4 mb-5" key={card.id} href={card.navigateTo}>
+            <Link className="m-auto w-full lg:w-2/4 mb-5" key={card.id} href={card.navigateTo}>
               <Card className='hover:cursor-pointer hover:bg-slate-50 transition-all duration-150 h-60 flex items-center justify-center flex-col'>
                 <CardHeader>
                   <CardTitle>
